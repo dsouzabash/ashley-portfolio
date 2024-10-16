@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ashley Dsouza</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/tooltip-component.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
+    <script type="module" src="scripts/tooltip-component.js" defer></script>
+  </head>
+  <body>
+    
+
+  	<nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="index.html#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="index.html#work">Work</a>
+        </li>
+        <li>
+          <a href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="welcome-section" class="welcome-section">
+      <h1>Ashley Dsouza</h1>
+      	Click <a href="pages/how-to-homepage.html">here to see how I built this page</a>
+    </section>
+    
+    <section id="work" class="projects-section">
+      <h2 class="projects-section-header">These are some of my projects</h2>
+
+      <div class="projects-grid">
+        <a href="pages/how-to-homepage.html" class="project project-tile">
+          <img class="project-image" src="images/HomePage Thumbnail.png" alt="project">
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Home Page HTML/CSS explanation
+            <span class="code">/&gt;</span>
+          </p>
+        </a>
+        <a href="pages/tribute.html" class="project project-tile">
+          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Tribute Page
+            <span class="code">/&gt;</span>
+          </p>
+        </a>
+        <a href="pages/how-to-tribute-page.html" class="project project-tile">
+          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Tribute Page HTML/CSS Explanation
+            <span class="code">/&gt;</span>
+          </p>
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <tooltip-component>
+        <span slot="trigger">Click me</span>
+        <span slot="content">This is some tooltip content!</span>
+      </tooltip-component>
+      <div class="contact-section-header">
+        <h2>Learn More About Me</h2>
+      </div>
+      <div class="contact-links">
+        <a id="profile-link" href="https://github.com/dsouzabash" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/ashleybdsouza/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </section>
+  </body>
+  </html>

@@ -1,0 +1,11 @@
+<!-- tooltip-component.html -->
+<template>
+  <div class="tooltip-container">
+    <button class="tooltip-trigger" aria-label="Show tooltip">
+      <slot name="trigger">Click me</slot>
+    </button>
+    <div class="tooltip-content" aria-hidden="true">
+      <slot name="content">Tooltip content goes here</slot>
+    </div>
+  </div>
+</template>

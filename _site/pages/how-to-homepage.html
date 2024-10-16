@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> How-To-HomePage
+    </title>
+    <link rel="stylesheet" href="{{ '../styles/tribute-styles.css' | url }}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="../index.html#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="../index.html#work">Work</a>
+        </li>
+        <li>
+          <a href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main">
+      <section id="title-section" class="title-section">
+        <h1 id="title">HTML basics</h1>
+        <p>Basics of HTML using the <a href="index.html">Home Page</a> as an example</p>
+      </section>
+
+      
+      <div class="toc-container">
+        <h2>Table of Contents</h2>
+        <ul class="toc">
+          <li><a href="#html">HTML</a></li>
+          <li><a href="#doctype">Doctype</a></li>
+          <li><a href="#head">Head</a></li>
+          <li><a href="#body">Body</a></li>
+          <li><a href="#navigation-explanation">Navigation</a></li>
+          <li><a href="#section-explanation">Section</a></li>
+          <li><a href="#h1-explanation">h1</a></li>
+          <li><a href="#h2-explanation">h2</a></li>
+          <li><a href="#h3-explanation">h3</a></li>
+          <li><a href="#div-explanation">div</a></li>
+        </ul>
+      </div>
+      <section class="explanation" id="html">
+        <h3>&lt;html&gt;</h3>
+        <p>The &lt;html&gt; Tag represents the root of an HTML document. You will see this on ALL website built on HTML</p>
+      </section>
+      <section class="explanation" id="doctype">
+        <h3>!DOCTYPE</h3>
+        <p>The HTML document type declaration, also known as DOCTYPE, is the first line of code required in every HTML or XHTML document. The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.</p>
+        <ul>
+          <li> HTML 5 - In HTML 5, the declaration of Doctype is simple, we only use &lt;!DOCTYPE html&gt;
+          </li>
+          <li> HTML 4.01 - Additionally, doctypes for HTML 4.01 required the declaration of either strict, transitional, or frameset DTD, each with a different use case as outlined below.
+          <ul>
+            <li> Strict DTD: Used for web pages that exclude attributes and elements that W3C expects to phase out as CSS support grows 
+              <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code>
+            </li>
+            <li> Transitional DTD: Used for web pages that include attributes and elements that W3C expects to phase out as CSS support grows
+              <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code>
+            </li>
+            <li> Frameset DTD: Used for web pages with frames
+              <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</code>
+            </li>
+          </ul>
+        </section>
+        <section class="explanation" id="head">
+          <h3>&lt;head&gt;</h3>
+          <p>The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information. The following elements can go inside the &lt;head&gt; element:</p>
+          <ul>
+              <li>&lt;title&gt; (required in every HTML document)</li>
+              <li>&lt;style&gt;</li>
+              <li>&lt;base&gt;</li>
+              <li>&lt;link&gt;</li>
+              <li>&lt;meta&gt;</li>
+              <li>&lt;script&gt;</li>
+              <li>&lt;noscript&gt;</li>
+            </ul>
+        </section>
+        <section class="explanation" id="body">
+          <h3>&lt;body&gt;</h3>
+          <p>The &lt;body&gt; tag defines the document's body. The &lt;body&gt; element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. 
+          <br><b>Note:</b> There can only be one &lt;body&gt; element in an HTML document.</p>
+        </section>
+        <section class="explanation" id="navigation-explanation">
+          <h3>&lt;nav&gt;</h3>
+          <p>Used for navigation links. It represents a section of the page that links to other parts of the website or external resources. Typically, you'll use this to group your primary menu or any set of links that allow users to navigate your site.</p>
+        </section>
+        <section class="explanation" id="section-explanation">
+          <h3>&lt;section&gt;</h3>
+          <p>Used to define a section in a webpage. It groups related content together, usually under a heading. This is useful when you want to split your content into logical blocks.</p>
+        </section>
+        <section class="explanation" id="h1-explanation">
+          <h3>&lt;h1&gt;</h3>
+          <p>Represents the highest level heading. Typically, this is the main title of the webpage or blog post, and there should only be one &lt;h1&gt; per page for accessibility and SEO reasons.
+          </p>
+        </section>
+        <section class="explanation" id="h2-explanation">
+          <h3>&lt;h2&gt;</h3>
+          <p>Used for subheadings, usually to introduce major sections of your content. This tag comes after &lt;h1&gt; in the hierarchy.
+          </p>
+        </section>
+        <section class="explanation" id="h3-explanation">
+          <h3>&lt;h3&gt;</h3>
+          <p>Used for sub-subheadings, typically under an &lt;h2&gt;. It further breaks down content within a section.
+          </p>
+        </section>
+        <section class="explanation" id="div-explanation">
+          <h3>&lt;div&gt;</h3>
+          <p>A generic container element, used to group together HTML elements for styling purposes (with CSS) or to manipulate with JavaScript. It doesn’t have any semantic meaning like the other tags but is very useful for layout and design.
+          </p>
+        </section>
+    </main>
+  </body>
+</html>

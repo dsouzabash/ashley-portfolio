@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> How To Tribute Page
+    </title>
+    <link rel="stylesheet" href="{{ '../styles/tribute-styles.css' | url }}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="../index.html#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="../index.html#work">Work</a>
+        </li>
+        <li>
+          <a href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main">
+      <section id="title-section" class="title-section">
+        <h1 id="title">CSS Basics </h1>
+        <p>CSS basics using the <a href="tribute.html">Tribute Page</a> as an example</p>
+      </section>
+      
+        <div class="toc-container">
+        <h2>Table of Contents</h2>
+        <ul class="toc">
+          <li><a href="#hero-image">Image Styling</a></li>
+          <li><a href="#custom-props-vars">Custom Properties/Variables</a></li>
+          <li><a href="#base-reset">Base Reset</a></li>
+          <li><a href="#box-sizing">Box Sizing and Font Sizing</a></li>
+          <li><a href="#navigation">Navigation</a></li>
+          <li><a href="#nav-list-items">Navigation List Items</a></li>
+          <li><a href="#welcome-section">Welcome Section</a></li>
+          <li><a href="#html-body-styling">HTML and body styling</a></li>
+          <li><a href="#headings-links">Heading and Links</a></li>
+          <li><a href="#main-content">Main Content</a></li>
+          <!-- Add more list items as needed -->
+        </ul>
+      </div>
+      
+        <ol>
+          <li><strong> <p id="hero-image">"Hero" Image </p></strong></li>
+          <code>img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+          }
+          </code>
+          <section>
+            <p><strong>img styling:</strong></p>
+                <ul> <li>max-width: 100%: Ensures that the image never exceeds the width of its container, making it responsive and adaptable to different screen sizes.</li>
+                <li>display: block: Changes the default inline behavior of the image to block, allowing it to take up the full width of its container.</li>
+                <li>height: auto: Maintains the aspect ratio of the image, adjusting the height automatically based on the image's width.</li>
+                <li>margin: 0 auto: Centers the image horizontally within its container by applying equal margins on both sides.</li></ul>
+          </section>
+          <code>
+            #img-div {
+              background: white;
+              padding: 10px;
+              margin: 0;
+            }
+          </code>
+          <section><p><strong>#img-div styling:</strong></p>
+            <ul><li>background: white: Sets the background color of the container holding the image to white.</li>
+            <li>padding: 10px: Adds 10 pixels of padding around the image inside the container.</li>
+            <li>margin: 0: Removes any default margin around the image container.</li></ul>
+          </section>
+          <code>
+            #img-caption {
+              margin: 15px 0 5px 0;
+            }
+          </code>
+            <section><p><strong>margin: 15px 0 5px 0: </strong></p>
+            <ul><li>Adds a margin of 15 pixels on top and 5 pixels on the bottom of the caption to create spacing between the caption and the elements around it. There is no margin on the left or right.</li></ul>
+          <li><strong><p id="custom-props-vars">Custom properties/variables </p></strong></li>
+          <code>
+          :root {
+            --main-white: #F0F0F0;
+            --main-red: #BE3144;
+            --main-blue: #45567D;
+            --main-gray: #303841;
+          }
+          </code>
+
+          <section>This block defines custom properties (also known as CSS variables) for the application. These variables can be used throughout the CSS code to maintain consistency in color schemes. The `:root` pseudo-class targets the root element of the document (usually the `html` element), and the custom properties are defined using the `--` prefix.
+          </section>
+
+          <li><strong> <p id="base-reset">Base reset </p></strong></li>
+          <code> * {
+            margin: 0;
+            padding: 0;
+          }
+          </code>
+          <section>This block resets the default margin and padding values for all elements (`*`) to 0. This is a common technique to ensure consistent styling across different browsers and elements.</section>
+
+          <li> <strong> <p id="box-sizing">Box sizing and font sizing</strong> </li>
+          <code>*,
+          *::before,
+          *::after {
+            box-sizing: inherit;
+          }
+          </code>
+          <section>This block sets the `box-sizing` property to `inherit` for all elements, including pseudo-elements (`::before` and `::after`). This ensures that all elements use the same box model, which can help with layout and sizing issues.</section>
+
+          <li><strong> <p id="navigation">Navigation (nav) </p></strong></li>
+
+          <code>.nav {
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10vh;
+            background: var(--main-red);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+            z-index: 10;
+          }
+
+          .nav-list {
+            display: flex;
+            margin-right: 2rem;
+            list-style: none;
+          }
+
+          @media (max-width: 28.75em) {
+            .nav {
+              justify-content: center;
+            }
+
+            .nav-list {
+              margin: 0 1rem;
+            }
+          }
+          </code>
+
+          This block styles the navigation bar. It uses flexbox to display the navigation items horizontally, with the main navigation container (`nav`) fixed to the top of the page. The navigation list (`nav-list`) is also displayed as a flex container, with a margin on the right side. The media query adjusts the navigation layout for smaller screen sizes, centering the navigation items and reducing the margin.
+
+          <li><strong><p id="nav-list-items">Navigation list items </p></strong></li>
+
+          <code>.nav-list a {
+            display: block;
+            font-size: 2.2rem;
+            padding: 2rem;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem; /* 18px */
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--main-white);
+          }
+
+          .nav-list a:hover {
+            background: var(--main-blue);
+          }
+          </code>
+
+          This block styles the individual navigation list items. It sets the font size, padding, and text decoration, as well as the font family and color. The hover state changes the background color to the main blue color.
+
+          <li><strong><p id="welcome-section">Welcome section</p></strong></li>
+
+          <code>.title-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            background-color: #ffff;
+            background-image: linear-gradient(62deg, #ffff 0%, #A25D75 100%);
+          }
+
+          .title-section > p {
+            font-size: 3rem;
+            font-weight: 200;
+            font-style: italic;
+            color: var(--main-red);
+          }
+          </code>
+
+          This block styles the welcome section. It uses flexbox to center the content vertically and horizontally, with a linear gradient background. The paragraph text is styled with a large font size, light weight, and italic style, with the main red color.
+
+          <li><strong><p id="image-styling">Image styling</p></strong></li>
+
+          <code>
+          #image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </code>
+
+          This block styles an image element with the ID `image`. It sets the maximum width to 100%, with an automatic height, and uses the `object-fit` property to cover the entire container. The image is displayed as a block element, centered horizontally.
+
+          <li><strong><p id="html-body-styling">HTML and body styling</p></strong></li>
+          <code>
+          html {
+            box-sizing: border-box;
+
+            /* Set font size for easy rem calculations
+             * default document font size = 16px, 1rem = 16px, 100% = 16px
+             * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+            */
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+          }
+
+          body {
+            /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+              'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #333;
+            margin: 0;
+          }
+          </code>
+
+          This block styles the HTML and body elements. It sets the box sizing model to border-box, and sets the font size to 62.5% to make it easier to calculate rem values. The body element is styled with a native font stack, a font size of 1.6rem, and a line height of 1.5. The text is centered, with a color of #333, and no margin.
+
+          <li><strong><p id="headings-links">Headings and links</p></strong></li>
+
+          <code>
+          h1 {
+            font-size: 4rem;
+            margin-bottom: 0;
+          }
+
+          @media (max-width: 460px) {
+            h1 {
+              font-size: 3.5rem;
+              line-height: 1.2;
+            }
+          }
+
+          h2 {
+            font-size: 3.25rem;
+          }
+
+          #main a {
+            color: #477CA7;
+          }
+
+          #main a:visited {
+            color: #74638F;
+          }
+          </code>
+
+          This block styles headings and links. It sets the font size for h1 and h2 elements, with a media query to adjust the font size for smaller screen sizes. It also styles links within the `#main` element with a specific color, and visited links with a different color.
+
+          <li><strong><p id="main-content">Main content</p></strong></li>
+
+          <code>
+          #main {
+            margin: 100px 8px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #eee;
+          }
+
+          @media (max-width: 460px) {
+            #main {
+              margin: 0;
+            }
+          }
+          </code>
+          This block styles the main content element. It sets a margin, padding, border radius, and background color. The media query adjusts the margin for smaller screen sizes.
+          </li>
+
+          <li>
+            <code>
+              code {
+                display: block;
+                text-align: left;
+                white-space: pre-line;
+                position: relative;
+                word-break: break-all;
+                word-wrap: break-word;
+                line-height: 2;
+                background-color: #f7f7f7;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 5px;
+              }
+            </code>
+            display: block;: This sets the display property of the element to block, which means it will take up the full width of its parent container and start on a new line.
+            text-align: left;: This sets the text alignment of the element to left, which means the text will be aligned to the left edge of the container.
+            white-space: pre-line;: This sets the white-space property to pre-line, which means that the text will be displayed in a pre-formatted style, with line breaks preserved, but also allowing for wrapping of long lines.
+            position: relative;: This sets the position property to relative, which means the element will be positioned relative to its normal position in the document flow.
+            word-break: normal;: This sets the word-break property to normal, which means that words will not be broken across lines unless there is a hyphen or other break character.
+            word-wrap: normal;: This sets the word-wrap property to normal, which means that words will not be wrapped to the next line unless there is a break character.
+            line-height: 2;: This sets the line height of the text to 2, which means that the height of each line of text will be twice the height of the font.
+            background-color: #f7f7f7;: This sets the background color of the element to a light gray color (#f7f7f7).
+            padding: 15px;: This sets the padding of the element to 15 pixels, which means that there will be a 15-pixel gap between the text and the edge of the element.
+            margin: 10px;: This sets the margin of the element to 10 pixels, which means that there will be a 10-pixel gap between the element and any adjacent elements.
+            border-radius: 5px;: This sets the border radius of the element to 5 pixels, which means that the corners of the element will be rounded.
+            Overall, this CSS block styles the element to have a light gray background, a 15-pixel padding, a 10-pixel margin, and a 5-pixel border radius. The text is aligned to the left, and the line height is set to 2. The element is also set to display as a block element, with a relative position.
+          </li>
+        </ol>
+    </main>
+  </body>
+</html>
