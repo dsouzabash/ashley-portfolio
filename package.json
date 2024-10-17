@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
+    //"build": "npx eleventy",
     "build": "env NODE_ENV=production npx eleventy --pathprefix 'ashley-portfolio'",
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy",
